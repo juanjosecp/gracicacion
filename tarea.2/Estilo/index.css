@@ -1,0 +1,87 @@
+
+:root{
+  --primary:#4361ee;
+  --secondary:#3a0ca3;
+  --success:#06d6a0;
+  --warning:#ffb703;
+}
+
+body{
+  background:linear-gradient(135deg,#eef2ff,#dbeafe);
+  font-family:'Segoe UI',sans-serif;
+  min-height:100vh;
+}
+
+.navbar{
+  background:linear-gradient(90deg,#1e3a8a,#2563eb)!important;
+  box-shadow:0 4px 15px rgba(0,0,0,.2);
+}
+
+.card{
+  border:none;
+  border-radius:20px;
+  background:white;
+  box-shadow:0 10px 30px rgba(0,0,0,.12);
+}
+
+.btn{
+  border:none!important;
+  border-radius:12px!important;
+  font-weight:600!important;
+  transition:.3s!important;
+}
+
+.btn:hover{
+  transform:translateY(-3px);
+  box-shadow:0 8px 18px rgba(0,0,0,.25);
+}
+
+.btn-primary{
+  background:linear-gradient(45deg,#4361ee,#4895ef)!important;
+}
+
+.btn-success{
+  background:linear-gradient(45deg,#06d6a0,#38b000)!important;
+}
+
+.btn-warning{
+  background:linear-gradient(45deg,#ffb703,#fb8500)!important;
+  color:white!important;
+}
+
+.btn-secondary{
+  background:linear-gradient(45deg,#6c757d,#495057)!important;
+}
+
+.btn-dark{
+  background:linear-gradient(45deg,#212529,#000)!important;
+}
+
+canvas{
+  border-radius:20px;
+  background:white;
+  box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+#coords{
+  background:white;
+  display:inline-block;
+  padding:10px 20px;
+  border-radius:20px;
+  box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.dark{
+  background:linear-gradient(135deg,#0f172a,#1e293b)!important;
+  color:white;
+}
+
+.dark .card,
+.dark #coords{
+  background:#1e293b;
+  color:white;
+}
+
+.dark canvas{
+  background:#ffffff;
+}

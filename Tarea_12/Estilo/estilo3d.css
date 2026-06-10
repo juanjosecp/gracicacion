@@ -1,0 +1,278 @@
+/* Fondo y estilo general como la imagen de referencia */
+* {
+    box-sizing: border-box;
+}
+
+body.bg-dashboard,
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #eeeeee;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #222;
+}
+
+.container-xl {
+    width: 100%;
+    max-width: none;
+    margin: 0 auto !important;
+    padding: 0 !important;
+}
+
+/* Tarjeta principal sin borde fuerte, integrada al fondo gris */
+.main-dashboard-card {
+    background: #eeeeee;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none !important;
+    min-height: 100vh;
+    padding: 14px 18px 40px !important;
+}
+
+.dashboard-title {
+    justify-content: flex-start !important;
+    font-size: 22px;
+    margin: 0;
+    padding: 8px 0 18px;
+    letter-spacing: .5px;
+}
+
+.text-center.mb-4 {
+    text-align: left !important;
+    margin-bottom: 18px !important;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #999;
+    opacity: .55;
+    margin: 0;
+}
+
+/* Panel de parámetros */
+.bg-panel-inputs,
+.card {
+    background-color: #ffffff !important;
+}
+
+.bg-panel-inputs {
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    padding: 12px 14px !important;
+    margin-bottom: 22px !important;
+}
+
+.bg-panel-inputs h5,
+.card h5 {
+    font-size: 15px;
+    margin-bottom: 18px;
+}
+
+.row.g-4 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.col-12.col-md-4 {
+    flex: 1 1 300px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.form-range {
+    width: 180px;
+    vertical-align: middle;
+}
+
+.badge {
+    background-color: transparent !important;
+    color: #222 !important;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.btn-action,
+#btnGraficar {
+    background: #e9e9e9;
+    border: 1px solid #999;
+    border-radius: 3px;
+    color: #222;
+    padding: 4px 10px;
+    cursor: pointer;
+    box-shadow: none !important;
+}
+
+/* Área del canvas */
+.shadow-inner {
+    box-shadow: none !important;
+}
+
+.card.border.border-light-subtle.p-3.p-sm-4.rounded-4.bg-white.shadow-inner {
+    background: #ffffff !important;
+    border: none !important;
+    border-radius: 0 !important;
+    min-height: 530px;
+    padding: 12px 10px !important;
+}
+
+.canvas-responsive-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+    padding: 24px 0;
+}
+
+#canvasPoligonos {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    width: 800px;
+    height: 500px;
+    background-color: #eeeeee;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.small,
+.text-muted {
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .main-dashboard-card {
+        padding: 10px !important;
+    }
+
+    .canvas-responsive-wrapper {
+        overflow-x: auto;
+        justify-content: flex-start;
+    }
+
+    #canvasPoligonos {
+        max-width: none;
+        width: 800px;
+    }
+}
+
+
+/* ===== CAMBIO FINAL: colores como la imagen de referencia ===== */
+:root{
+    --azul-superior:#0d6efd;
+    --gris-fondo:#f2f2f2;
+    --gris-linea:#d6d6d6;
+    --azul-footer:#19495c;
+}
+
+html, body{
+    margin:0 !important;
+    background:var(--gris-fondo) !important;
+    color:#212529 !important;
+}
+
+/* barra azul superior igual a la captura */
+.container-xl::before{
+    content:"Graficación   Abrir   Visualizar   Expand   About";
+    display:block;
+    width:100%;
+    background:var(--azul-superior);
+    color:white;
+    height:44px;
+    line-height:44px;
+    padding-left:8px;
+    font-size:16px;
+    box-shadow:0 1px 2px rgba(0,0,0,.25);
+}
+
+.container-xl::after{
+    content:"Repositorio Principal        Contáctanos        Estudiantes";
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:220px;
+    width:100%;
+    min-height:58px;
+    background:var(--azul-footer);
+    color:white;
+    text-decoration:underline;
+    margin-top:0;
+}
+
+.main-dashboard-card{
+    background:var(--gris-fondo) !important;
+    padding:0 !important;
+    min-height:100vh;
+}
+
+.text-center.mb-4{
+    margin:0 !important;
+    padding:10px 0 0 !important;
+    background:var(--gris-fondo) !important;
+}
+
+.dashboard-title{
+    justify-content:center !important;
+    font-size:13px !important;
+    font-weight:400 !important;
+    color:#333 !important;
+    letter-spacing:0 !important;
+    padding:0 0 10px !important;
+    text-transform:none !important;
+}
+
+.dashboard-title i{
+    display:none !important;
+}
+
+.dashboard-title::before{
+    content:"Canvas de visualización";
+}
+
+.dashboard-title{
+    font-size:0 !important;
+}
+
+hr{
+    border-top:1px solid var(--gris-linea) !important;
+    opacity:1 !important;
+}
+
+.bg-panel-inputs{
+    background:#f8f9fa !important;
+    border:1px solid #d8d8d8 !important;
+    border-radius:0 !important;
+    margin:0 !important;
+}
+
+.card.border.border-light-subtle.p-3.p-sm-4.rounded-4.bg-white.shadow-inner{
+    background:#fff !important;
+    border-radius:0 !important;
+    border:none !important;
+    margin:16px 0 0 !important;
+}
+
+#canvasPoligonos{
+    background:#e4e7ea !important;
+}
+
+.btn-action, #btnGraficar{
+    background:#eeeeee !important;
+    color:#222 !important;
+    border:1px solid #777 !important;
+    border-radius:3px !important;
+}
+
+.badge{
+    background:transparent !important;
+    color:#222 !important;
+}
+
+@media(max-width:900px){
+    .container-xl::after{gap:40px;font-size:12px;}
+}
